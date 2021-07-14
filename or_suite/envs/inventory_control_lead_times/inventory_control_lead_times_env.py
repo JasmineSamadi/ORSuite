@@ -2,16 +2,19 @@ import gym
 import numpy as np
 import sys
 
+from .. import env_configs
+
 
 class InventoryControlLeadTimesEnvironment(gym.Env):
 
     # note I just chose some default values
-    def __init__(self, alpha=1.0, h=1.0, p=1.0, L=1, length=10000, **kwargs):
-        self.alpha = alpha  # parameter of exponenetial demand, 1/alpha is mean demand
-        self.h = h  # holding cost
-        self.p = p  # lost sales penalty
-        self.L = L  # lead time
-        self.length = length  # how many periods to run simulation
+    def __init__(self, config=env_configs.inventory_control_lead_times_default_config, **kwargs):
+        # parameter of exponenetial demand, 1/alpha is mean demand
+        self.alpha = config['alpha']
+        self.h = config['h']  # holding cost
+        self.p = config['p']  # lost sales penalty
+        self.L = config['L']  # lead time
+        self.length = config['length']  # how many periods to run simulation
 
         for key in kwargs:
             setattr(self, key, kwargs[key])
