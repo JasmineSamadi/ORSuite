@@ -219,7 +219,7 @@ oil_environment_default_config = {
 
 }
 
-inventory_control_lead_time_default_config = {
+inventory_control_lead_times_default_config = {
     'alpha': 1.0,
     'h': 1.0,
     'p': 1.0,
