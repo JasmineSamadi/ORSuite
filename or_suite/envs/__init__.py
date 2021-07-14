@@ -54,5 +54,5 @@ register(id='Oil-v0',
 # Inventory Control with Lead Times
 
 register(id='Lead-v0',
-         entry_point='or_suite.envs.inventory_control_lead_times.inventory_control_lead_times:InventoryControlLeadTimesEnvironment'
+         entry_point='or_suite.envs.inventory_control_lead_times.inventory_control_lead_times_env:InventoryControlLeadTimesEnvironment'
          )
